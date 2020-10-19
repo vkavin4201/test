@@ -1,0 +1,10 @@
+import cgi
+print("Content-Type: text/html")
+print()
+print("<h1>Welcome to web application</h1>")
+print("<hr/>")
+print("<h2>Using Input tags</h2>")
+form = cgi.FieldStorage()
+roll = form.getvalue('roll')
+name = form.getvalue('name')
+print"<h2>Hello %s %s</h2>"%(roll,name)
